@@ -1,5 +1,6 @@
 import { Box, Grid, Heading } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
+import { useScroll, useTransform, motion } from "framer-motion";
 function Hero() {
   return (
     <Grid
@@ -18,6 +19,9 @@ function Hero() {
 export default Hero;
 
 function HeroText() {
+  const { scrollY } = useScroll();
+
+  const bgPos = useTransform(scrollY, [0, 600], ["0%", "100%"]);
   return (
     <Box mt='15vh' pos='relative'>
       <Heading
@@ -32,7 +36,10 @@ function HeroText() {
           Jason
         </Box>
         <Box
-          as='span'
+          as={motion.span}
+          style={{
+            backgroundPositionX: bgPos,
+          }}
           ml='5vw'
           color='fuchsia'
           bgImage='url("/assets/codeLines.jpg")'
