@@ -41,8 +41,8 @@ function HeroText() {
         <Box
           as='span'
           display='block'
-          style={{ color: "transparent", WebkitTextStroke: "2px fuchsia" }}
-          filter='drop-shadow(4px 4px rgba(0,0,0,1)) drop-shadow(0px 0px 2px fuchsia)'
+          style={{ color: "transparent", WebkitTextStroke: "2px magenta" }}
+          filter='drop-shadow(4px 4px rgba(0,0,0,1)) drop-shadow(0px 0px 2px magenta)'
           fontSize={{ base: "80px", md: "10vw" }}
           lineHeight={{ md: "16vh" }}
         >
@@ -56,11 +56,11 @@ function HeroText() {
             backgroundPositionX: bgPos,
           }}
           ml='5vw'
-          color='fuchsia'
+          color='magenta'
           bgImage='url("/assets/codeLines.jpg")'
           bgClip='text'
           bgSize='40%'
-          filter='drop-shadow(8px 8px fuchsia)'
+          filter='drop-shadow(8px 8px magenta)'
         >
           Lapina
         </Box>
