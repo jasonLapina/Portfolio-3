@@ -1,5 +1,5 @@
 import { Box, Grid, HStack, Icon, Text, VStack } from "@chakra-ui/react";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Copy from "./Copy";
 function About() {
   return (
@@ -20,7 +20,20 @@ function About() {
 export default About;
 
 function Profile() {
-  const socMed = [];
+  const socMed = [
+    {
+      icon: FaGithub,
+      link: "1",
+    },
+    {
+      icon: FaLinkedin,
+      link: "2",
+    },
+    {
+      icon: FaGithub,
+      link: "3",
+    },
+  ];
   return (
     <HStack gap='0'>
       <Box borderRadius='16px 0 0 16px' h='80%' w='80px'>
@@ -35,10 +48,12 @@ function Profile() {
           <Box fontWeight='bolder' fontSize='32px' as='span'>
             JL
           </Box>
-          <VStack gap='24px'>
-            <Icon boxSize='24px' />
-            <Icon boxSize='24px' />
-            <Icon boxSize='24px' />
+          <VStack gap='32px'>
+            {socMed.map((s) => (
+              <a key={s.link} href=''>
+                <Icon boxSize='24px' as={s.icon} />
+              </a>
+            ))}
           </VStack>
           <Icon cursor='pointer' boxSize='32px' as={FaFileDownload} />
         </Grid>
@@ -80,6 +95,9 @@ function Profile() {
           transform='translateX(-50%)'
           fontSize='20px'
           fontStyle='italic'
+          color='magenta'
+          fontWeight='bold'
+          letterSpacing='widest'
         >
           Developer | Designer
         </Text>

@@ -7,13 +7,23 @@ import {
   Icon,
   Grid,
 } from "@chakra-ui/react";
+
 import { FaDesktop } from "react-icons/fa";
+
 function Copy() {
   return (
-    <VStack align='normal' pr='80px' py='40px' overflow='auto' gap='48px'>
+    <VStack
+      css={{ "&::-webkit-scrollbar": { width: "0" } }}
+      align='normal'
+      pr='80px'
+      py='40px'
+      overflow='auto'
+      gap='48px'
+    >
       <Intro />
       <Skills />
       <TechStack />
+      <Background />
     </VStack>
   );
 }
@@ -24,6 +34,15 @@ function TechStack() {
   return (
     <Box>
       <Heading mb='24px'>my technology</Heading>
+      <Grid gridTemplateColumns='repeat(4,1fr)'></Grid>
+    </Box>
+  );
+}
+
+function Background() {
+  return (
+    <Box>
+      <Heading mb='24px'>my background</Heading>
       <Grid gridTemplateColumns='repeat(4,1fr)'></Grid>
     </Box>
   );
