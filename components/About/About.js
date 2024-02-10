@@ -1,5 +1,11 @@
 import { Box, Grid, HStack, Icon, Text, VStack } from "@chakra-ui/react";
-import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaFileDownload,
+  FaGithub,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import Copy from "./Copy";
 function About() {
   return (
@@ -10,7 +16,22 @@ function About() {
       h='70vh'
       bgColor='#222'
       borderRadius='20px'
+      pos='relative'
     >
+      <Box
+        pos='absolute'
+        h='40px'
+        top='0'
+        w='100%'
+        bgGradient='linear(to bottom, #222, rgba(28,30,31,.1))'
+      />
+      <Box
+        pos='absolute'
+        h='40px'
+        bottom='0'
+        w='100%'
+        bgGradient='linear(to top, #222, rgba(28,30,31,.1))'
+      />
       <Profile />
       <Copy />
     </Grid>
@@ -24,14 +45,17 @@ function Profile() {
     {
       icon: FaGithub,
       link: "1",
+      color: "white",
     },
     {
-      icon: FaLinkedin,
+      icon: FaLinkedinIn,
       link: "2",
+      color: "#0e76a8 ",
     },
     {
-      icon: FaGithub,
+      icon: FaFacebookF,
       link: "3",
+      color: "#1877F2",
     },
   ];
   return (
@@ -48,10 +72,10 @@ function Profile() {
           <Box fontWeight='bolder' fontSize='32px' as='span'>
             JL
           </Box>
-          <VStack gap='32px'>
+          <VStack gap='24px'>
             {socMed.map((s) => (
               <a key={s.link} href=''>
-                <Icon boxSize='24px' as={s.icon} />
+                <Icon boxSize='30px' color={s.color} as={s.icon} />
               </a>
             ))}
           </VStack>
