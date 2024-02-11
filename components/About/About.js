@@ -67,7 +67,7 @@ function Profile() {
           alignItems='center'
           gridTemplateRows='1fr 4fr 1fr'
           justifyContent='center'
-          color='magenta'
+          color='var(--primary)'
         >
           <Box fontWeight='bolder' fontSize='32px' as='span'>
             JL
@@ -99,7 +99,7 @@ function Profile() {
         bgRepeat='no-repeat'
         bgPos='center'
         pos='relative'
-        filter='drop-shadow(4px 4px magenta)'
+        filter='drop-shadow(4px 4px var(--primary))'
       >
         <Text
           pos='absolute'
@@ -119,7 +119,7 @@ function Profile() {
           transform='translateX(-50%)'
           fontSize='20px'
           fontStyle='italic'
-          color='magenta'
+          color='var(--primary)'
           fontWeight='bold'
           letterSpacing='widest'
         >

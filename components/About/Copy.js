@@ -62,7 +62,7 @@ function Background() {
       <Heading mb='24px'>my background</Heading>
       <HStack mb='16px'>
         <Icon boxSize='24px' as={FaGraduationCap} />
-        <Text fontSize='24px' color='magenta' fontWeight='semibold'>
+        <Text fontSize='24px' color='var(--primary)' fontWeight='semibold'>
           Education
         </Text>
       </HStack>
@@ -74,13 +74,13 @@ function Background() {
       </Text>
       <HStack>
         <Icon boxSize='24px' as={FaBriefcase} />
-        <Text fontSize='24px' color='magenta' fontWeight='semibold'>
+        <Text fontSize='24px' color='var(--primary)' fontWeight='semibold'>
           Experience
         </Text>
       </HStack>
       <VStack align='normal' mt='16px'>
         <Box>
-          <Text fontWeight='semibold' color='magenta'>
+          <Text fontWeight='semibold' color='var(--primary)'>
             2023 - Present
           </Text>
           <Text fontWeight='bold' fontSize='20px'>
@@ -92,7 +92,7 @@ function Background() {
           </Text>
         </Box>
         <Box>
-          <Text fontWeight='semibold' color='magenta'>
+          <Text fontWeight='semibold' color='var(--primary)'>
             2022 - 2023
           </Text>
           <Text fontWeight='bold' fontSize='20px'>
@@ -104,7 +104,7 @@ function Background() {
           </Text>
         </Box>
         <Box>
-          <Text fontWeight='semibold' color='magenta'>
+          <Text fontWeight='semibold' color='var(--primary)'>
             2022 - 2023
           </Text>
           <Text fontWeight='bold' fontSize='20px'>
@@ -127,15 +127,15 @@ function Intro() {
         about me
       </Heading>
       <HStack fontStyle='italic' gap='8px'>
-        <Text letterSpacing='widest' fontWeight='bold' color='magenta'>
+        <Text letterSpacing='widest' fontWeight='bold' color='var(--primary)'>
           Skills
         </Text>
         <Text color='#999'>/</Text>
-        <Text letterSpacing='widest' fontWeight='bold' color='magenta'>
+        <Text letterSpacing='widest' fontWeight='bold' color='var(--primary)'>
           Tech-Stack
         </Text>
         <Text color='#999'>/</Text>
-        <Text letterSpacing='widest' fontWeight='bold' color='magenta'>
+        <Text letterSpacing='widest' fontWeight='bold' color='var(--primary)'>
           Background
         </Text>
       </HStack>
@@ -180,7 +180,7 @@ function Skills() {
       <Grid gridTemplateColumns='1fr 1fr' gap='16px'>
         {skills.map((s) => (
           <Box key={s.title}>
-            <Icon color='magenta' mb='8px' boxSize='32px' as={s.icon} />
+            <Icon color='var(--primary)' mb='8px' boxSize='32px' as={s.icon} />
             <Text mb='8px' fontSize='24px' fontWeight='bold'>
               {s.title}
             </Text>

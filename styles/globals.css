@@ -1,3 +1,9 @@
+:root {
+  --primary: magenta;
+  --secondary: black;
+  --accent: red;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

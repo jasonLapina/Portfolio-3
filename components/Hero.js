@@ -41,8 +41,11 @@ function HeroText() {
         <Box
           as='span'
           display='block'
-          style={{ color: "transparent", WebkitTextStroke: "2px magenta" }}
-          filter='drop-shadow(4px 4px rgba(0,0,0,1)) drop-shadow(0px 0px 2px magenta)'
+          style={{
+            color: "transparent",
+            WebkitTextStroke: "2px var(--primary)",
+          }}
+          filter='drop-shadow(4px 4px rgba(0,0,0,1)) drop-shadow(0px 0px 2px var(--primary))'
           fontSize={{ base: "80px", md: "10vw" }}
           lineHeight={{ md: "16vh" }}
         >
@@ -56,16 +59,27 @@ function HeroText() {
             backgroundPositionX: bgPos,
           }}
           ml='5vw'
-          color='magenta'
+          color='var(--primary)'
           bgImage='url("/assets/codeLines.jpg")'
           bgClip='text'
           bgSize='40%'
-          filter='drop-shadow(8px 8px magenta)'
+          filter='drop-shadow(8px 8px var(--primary))'
         >
           Lapina
         </Box>
-        <Box ml='3vw' mt='40px' fontSize='24px'>
-          Web Developer | React | Node | AWS
+        <Box ml='6vw' fontWeight='thin' fontSize='20px' w='400px' mt='56px'>
+          A full-stack web & mobile developer with a strong focus on the
+          frontend.{" "}
+          <Box
+            as='span'
+            fontWeight='normal'
+            color='var(--primary)'
+            textDecor='underline'
+            cursor='pointer'
+          >
+            Learn more&darr;
+          </Box>{" "}
+          about my skills and experiences.
         </Box>
       </Heading>
     </Box>
