@@ -7,7 +7,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Copy from "./Copy";
-function About() {
+function About(props) {
   return (
     <Grid
       maxW='1280px'
@@ -33,7 +33,7 @@ function About() {
         bgGradient='linear(to top, #222, rgba(28,30,31,.1))'
       />
       <Profile />
-      <Copy />
+      <Copy tech={props.tech} />
     </Grid>
   );
 }
