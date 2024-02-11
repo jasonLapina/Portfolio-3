@@ -3,7 +3,7 @@ import { Box, Center, HStack, Heading, Image, Text } from "@chakra-ui/react";
 function Projects() {
   const projects = Array.from({ length: 7 });
   return (
-    <Box mt='240px'>
+    <Box mb='160px'>
       <Heading textAlign='center' mb='80px'>
         Projects
       </Heading>
