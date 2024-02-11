@@ -85,8 +85,7 @@ function Profile() {
       <Box
         bg='rgba(255,255,255,.2)'
         borderRadius='16px'
-        // boxShadow='0 4px 30px rgba(0,0,0,.1)'
-        boxShadow='0 4px 30px rgba(255,255,255,.5)'
+        // boxShadow='0 4px 30px rgba(255,255,255,.5)'
         backdropFilter='blur(5px)'
         border='solid 1px rgba(255,255,255,.3)'
         style={{
@@ -100,6 +99,7 @@ function Profile() {
         bgRepeat='no-repeat'
         bgPos='center'
         pos='relative'
+        filter='drop-shadow(4px 4px magenta)'
       >
         <Text
           pos='absolute'
