@@ -8,7 +8,7 @@ import supabase from "../utils/supabase";
 export default function Home(props) {
   return (
     <Box pb='80px' color='white' bgColor='#333'>
-      <Hero />
+      {/* <Hero /> */}
       <Projects />
       <About tech={props.tech} />
     </Box>

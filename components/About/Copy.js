@@ -10,7 +10,7 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 
-import { FaDesktop } from "react-icons/fa";
+import { FaBriefcase, FaDesktop, FaGraduationCap } from "react-icons/fa";
 import { apiURL } from "../../utils/config";
 
 function Copy({ tech }) {
@@ -39,7 +39,7 @@ function TechStack({ tech }) {
       <Heading mb='24px'>my technology</Heading>
       <HStack gap='24px' flexWrap='wrap' justifyContent='center' maxW='100%'>
         {tech.map((t) => (
-          <Tooltip key={t.name} label={t.name}>
+          <Tooltip placement='auto' hasArrow key={t.name} label={t.name}>
             <Image
               filter='drop-shadow(1px 2px rgba(255,0,255,.5))'
               w='80px'
@@ -60,7 +60,62 @@ function Background() {
   return (
     <Box>
       <Heading mb='24px'>my background</Heading>
-      <Grid gridTemplateColumns='repeat(4,1fr)'></Grid>
+      <HStack mb='16px'>
+        <Icon boxSize='24px' as={FaGraduationCap} />
+        <Text fontSize='24px' color='magenta' fontWeight='semibold'>
+          Education
+        </Text>
+      </HStack>
+      <Text mb='24px'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ex
+        assumenda enim est delectus accusantium quaerat autem tempore, ut itaque
+        dignissimos molestiae cum aliquid fugiat ducimus voluptate provident
+        reiciendis error?
+      </Text>
+      <HStack>
+        <Icon boxSize='24px' as={FaBriefcase} />
+        <Text fontSize='24px' color='magenta' fontWeight='semibold'>
+          Experience
+        </Text>
+      </HStack>
+      <VStack align='normal' mt='16px'>
+        <Box>
+          <Text fontWeight='semibold' color='magenta'>
+            2023 - Present
+          </Text>
+          <Text fontWeight='bold' fontSize='20px'>
+            Blink Creative Studio, Web Developer
+          </Text>
+          <Text>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium recusandae aspernatur quisquam.
+          </Text>
+        </Box>
+        <Box>
+          <Text fontWeight='semibold' color='magenta'>
+            2022 - 2023
+          </Text>
+          <Text fontWeight='bold' fontSize='20px'>
+            Freelance, Web Developer
+          </Text>
+          <Text>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium recusandae aspernatur quisquam.
+          </Text>
+        </Box>
+        <Box>
+          <Text fontWeight='semibold' color='magenta'>
+            2022 - 2023
+          </Text>
+          <Text fontWeight='bold' fontSize='20px'>
+            Freelance, Web Developer
+          </Text>
+          <Text>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium recusandae aspernatur quisquam.
+          </Text>
+        </Box>
+      </VStack>
     </Box>
   );
 }

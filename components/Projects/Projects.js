@@ -35,11 +35,6 @@ function ProjectCell() {
       clipPath='polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
       pos='relative'
       role='group'
-      _hover={{
-        transform: "scale(1.1)",
-        zIndex: 3,
-      }}
-      transition='all .3s'
     >
       <Image
         src='https://tulaaruanfxnjckaiswj.supabase.co/storage/v1/object/public/projects/jfc%20universe2.png'
