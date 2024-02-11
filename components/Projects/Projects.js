@@ -11,7 +11,8 @@ function Projects() {
         // bgColor='red'
         justifyContent='center'
         flexWrap='wrap'
-        maxWidth='1340px'
+        // maxWidth='1340px'
+        maxW='80vw'
         mx='auto'
         gap='4px'
       >
@@ -28,10 +29,11 @@ export default Projects;
 function ProjectCell() {
   return (
     <Box
-      w='320px'
-      h='240px'
+      w='18vw'
+      h='16vw'
+      marginTop='-4vw'
+      // h='240px'
       clipPath='polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-      marginTop='-60px'
       pos='relative'
       role='group'
       _hover={{
