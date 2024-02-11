@@ -1,4 +1,4 @@
-import { Box, Center, HStack, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, HStack, Heading, Image } from "@chakra-ui/react";
 
 function Projects() {
   const projects = Array.from({ length: 7 });
@@ -32,7 +32,6 @@ function ProjectCell() {
       w='18vw'
       h='16vw'
       marginTop='-4vw'
-      // h='240px'
       clipPath='polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
       pos='relative'
       role='group'

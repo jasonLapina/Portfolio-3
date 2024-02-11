@@ -7,6 +7,7 @@ import {
   Icon,
   Grid,
   Image,
+  Tooltip,
 } from "@chakra-ui/react";
 
 import { FaDesktop } from "react-icons/fa";
@@ -36,6 +37,21 @@ function TechStack({ tech }) {
   return (
     <Box>
       <Heading mb='24px'>my technology</Heading>
+      <HStack gap='24px' flexWrap='wrap' justifyContent='center' maxW='100%'>
+        {tech.map((t) => (
+          <Tooltip key={t.name} label={t.name}>
+            <Image
+              filter='drop-shadow(1px 2px rgba(255,0,255,.5))'
+              w='80px'
+              alt={t.name}
+              src={
+                apiURL +
+                `/storage/v1/object/public/skills/${t.name.toLowerCase()}.svg`
+              }
+            />
+          </Tooltip>
+        ))}
+      </HStack>
     </Box>
   );
 }
